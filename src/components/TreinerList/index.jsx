@@ -1,4 +1,14 @@
 export const TreinerList = ({ pokemonList }) => {
+  if (!pokemonList) {
+    return (
+      <section id="treiner-list">
+        <h2>Lista de treinadores</h2>
+        <fieldset className="group">
+          <p>Nenhum treinador cadastrado</p>
+        </fieldset>
+      </section>
+    );
+  }
   return (
     <section id="treiner-list">
       <h2>Lista de treinadores</h2>
