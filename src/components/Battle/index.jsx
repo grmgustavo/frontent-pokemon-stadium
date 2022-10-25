@@ -54,15 +54,23 @@ export const Battle = ({
     <section className="border my-5 py-2 px-2 w-full rounded hover:border-blue-500 text-center">
       {battleResult?.vencedor?.treinador ? (
         <>
-          <h3 className="py-1">resultado:</h3>
-          <div className="py-1">Vencedor:{battleResult.vencedor.treinador}</div>
+          <h3 className="py-1">resultado: </h3>
+          <div className="py-1">
+            <p>
+              Vencedor: {battleResult.vencedor.treinador} ID:{" "}
+              <strong>{battleResult.vencedor.id}</strong>
+            </p>
+          </div>
         </>
       ) : (
         ""
       )}
       {battleResult?.perdedor?.treinador ? (
         <>
-          <div className="py-1">Perdedor:{battleResult.perdedor.treinador}</div>
+          <div className="py-1">
+            Perdedor: {battleResult.perdedor.treinador} ID:{" "}
+            <strong>{battleResult.perdedor.id}</strong>
+          </div>
         </>
       ) : (
         ""
